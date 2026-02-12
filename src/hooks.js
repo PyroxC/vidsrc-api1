@@ -3,7 +3,7 @@ import { load } from "cheerio";
 
 export async function getVidsrcSourcesId(tmdbId, seasonNumber, episodeNumber) {
   const type = seasonNumber && episodeNumber ? "tv" : "movie";
-  const url = `${vidsrcBase}/v2/embed/${type}/${tmdbId}${
+  const url = `${vidsrcBase}/embed/${type}/${tmdbId}${
     type === "tv" ? `/${seasonNumber}/${episodeNumber}` : ""
   }`;
 
